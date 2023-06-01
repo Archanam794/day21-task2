@@ -6,14 +6,11 @@ async function fetchdata(){
     try{
         let result=await fetch(url);
         let output=await result.json();
-        //console.log(output);
         if(output.length>0){
         datav=[...output];}
        createCard(datav);
-      // createchaps(datav);
        
-        
-    }
+   }
     catch(error){
         console.log(error);
     }
